@@ -4,6 +4,7 @@ import yaml
 from pathlib import Path
 from typing import Dict, Any
 
+
 def setup_logging(config_path: str = "config/logging.conf") -> None:
     """Настройка логирования из конфигурационного файла"""
     if Path(config_path).exists():
@@ -20,8 +21,3 @@ def load_config(config_path: str = "config/config.yaml") -> Dict[str, Any]:
 def get_logger(name: str) -> logging.Logger:
     """Получить логгер по имени модуля"""
     return logging.getLogger(name)
-
-
-
-
-
